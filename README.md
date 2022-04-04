@@ -67,15 +67,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 How to do first steps 
 
 
-#####################################
+*************************
 urls:
+*************************
 https://github.com/yajra/laravel-datatables
+*************************
 https://jquery.com/
+*************************
 https://getbootstrap.com/
+*************************
 https://github.com/DataTables/DataTables
+*************************
 https://sweetalert2.github.io/
+*************************
 https://github.com/CodeSeven/toastr
-#####################################
+*************************
 
 prerequirements:
 
@@ -85,81 +91,129 @@ php7+
 
 NodeJs
 
-####################################
+*************************
 steps and codes:
 **************************
 1- first we create our project
+*************************
 composer create-project laravel/laravel=8 laravel8-yajradatatable --prefer-dist
 **************************
 2- cd laravel8-yajradatatable
+*************************
 3- lets test our project
+*************************
 php artisan serve
+*************************
 the adress :127.0.0.1:8000 
+*************************
 **************************
 
 3- edit .env file and set the database name in our project lets say 'laravel8-yajradatatable'
+*************************
 DB_DATABASE=laravel8-yajradatatable
+*************************
 DB_USERNAME=root
+*************************
 DB_PASSWORD=
+*************************
 
 4- we should create an empty database using mysql phpmyadmin called laravel8-yajradatatable 
 *************************
 5- we start to set prerequirements and utilities for our projects
+*************************
 
 *** to use datatables yajra ***
+*************************
 https://github.com/yajra/laravel-datatables
+*************************
 composer require yajra/laravel-datatables-oracle:"~9.0"
+*************************
 
 config/app.php
+*************************
 'providers' => [
+*************************
     ...,
+    *************************
     Yajra\DataTables\DataTablesServiceProvider::class,
+    *************************
 ]
+*************************
 
 'aliases' => [
+*************************
     ...,
+    *************************
     'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+    *************************
 ]
+*************************
 
 php artisan vendor:publish --provider="Yajra\DataTables\DataTablesServiceProvider"
+*************************
 
 ***  download jquery scripts ****
+*************************
 https://jquery.com/
+*************************
 Download the compressed, production jQuery 3.6.0
 save the file
+*************************
 
 *** get the bootstrap ***
+*************************
 https://getbootstrap.com/
+*************************
 choose v4.6 and download 
-
+*************************
 ***   datatables ****
+*************************
 https://github.com/DataTables/DataTables
+*************************
 chosse tag release and download zip
-
+*************************
 *** sweet alert ****
+*************************
 https://sweetalert2.github.io/
+*************************
 https://github.com/sweetalert2/sweetalert2/releases/tag/v11.0.18
-choose 11.0.18
-downlad sweetalert2.min.css and sweetalert2.min.js
-*** toastr github ****
-https://github.com/CodeSeven/toastr
-download the last version 2.1.1
 
+*************************
+choose 11.0.18
+*************************
+downlad sweetalert2.min.css and sweetalert2.min.js
+*************************
+*** toastr github ****
+*************************
+https://github.com/CodeSeven/toastr
+*************************
+download the last version 2.1.1
+*************************
 ==>
+*************************
 we create folders in public in our projets
+*************************
 bootstrap - datatbale - jquey - sweetalert2 - toastr
+*************************
 we copy only js and css file from the downloaded files
 ********************************
-
+*************************
 6- we start coding our project laravel by begining create controller countries
+*************************
 php artisan make:controller CountriesController
+*************************
 in the folder app/http/controllers you will see new file created CountriesController.php
+*************************
 7- seting the route 
-
+*************************
 use App\Http\Controllers\CountriesController;
+*************************
 Route::get('/countries-list',[CountriesController::class, 'index'])->name('countries.list');
+*************************
 as we see we create a route calling the function index from Countriescontroller so we have to creat the index function in the controller and also the view countries-list we have to create it in blade (resources/views)
+*************************
 this is how our blade file looks like countries-list.blade.php:
+*************************
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +226,8 @@ this is how our blade file looks like countries-list.blade.php:
     hello countries
 </body>
 </html>
-
+*************************
 8- create our model and table countries
+*************************
 php artisan make:model Country -m
 
