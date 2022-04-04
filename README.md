@@ -76,10 +76,15 @@ https://github.com/DataTables/DataTables
 https://sweetalert2.github.io/
 https://github.com/CodeSeven/toastr
 #####################################
+
 prerequirements:
+
 composer
+
 php7+ 
+
 NodeJs
+
 ####################################
 steps and codes:
 **************************
@@ -91,10 +96,12 @@ composer create-project laravel/laravel=8 laravel8-yajradatatable --prefer-dist
 php artisan serve
 the adress :127.0.0.1:8000 
 **************************
+
 3- edit .env file and set the database name in our project lets say 'laravel8-yajradatatable'
 DB_DATABASE=laravel8-yajradatatable
 DB_USERNAME=root
 DB_PASSWORD=
+
 4- we should create an empty database using mysql phpmyadmin called laravel8-yajradatatable 
 *************************
 5- we start to set prerequirements and utilities for our projects
