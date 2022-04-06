@@ -214,7 +214,7 @@ as we see we create a route calling the function index from Countriescontroller 
 *************************
 this is how our blade file looks like countries-list.blade.php:
 *************************
-<!DOCTYPE html>
+<pre><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -226,6 +226,7 @@ this is how our blade file looks like countries-list.blade.php:
     hello countries
 </body>
 </html>
+</pre>
 *************************
 8- create our model and table countries
 *************************
