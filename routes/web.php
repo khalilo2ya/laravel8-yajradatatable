@@ -15,7 +15,7 @@ use App\Http\Controllers\CountriesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('countries-list');
 });
 
 
